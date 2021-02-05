@@ -1,0 +1,26 @@
+<div class="card" >
+    <div class="card-body">
+        <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" placeholder="Write new post/upload pic" [(ngModel)]="postMsg" />
+                <div class="input-group-prepend">
+                    <div class="input-group-text" style="cursor: pointer;" (click)="createPost()">Post</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3 overflow-auto" style="height: 450px;">
+    <div class="card mt-2" *ngFor="let post of postList">
+        <div class="card-body">
+            <p class="card-text">{{post.post}}</p>
+        </div>
+        <span class="card-footer text-muted" style="text-align:end;font-size: 10px;">
+            {{post.createdDate}}
+        </span>
+    </div>
+
+    
+</div>

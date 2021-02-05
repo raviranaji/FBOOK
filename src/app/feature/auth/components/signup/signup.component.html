@@ -1,0 +1,51 @@
+<div class="container" style="margin-bottom:20px; ">
+  <form class="form-signin col-sm-5 offset-sm-4" ngNativeValidate #signUpFormData="ngForm"
+    (ngSubmit)="signupHandler(signUpFormData)">
+
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+    </div>
+
+    <div class="form-group">
+      <label for="staticfirstName">First Name</label>
+      <input type="text" name="firstName" id="staticfirstName" class="form-control" ngModel placeholder="First Name"
+        required autofocus>
+    </div>
+
+    <div class="form-group">
+      <label for="staticlastName">Last Name</label>
+      <input type="text" name="lastName" id="staticlastName" class="form-control" ngModel placeholder="Last Name"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="staticemail">Email</label>
+      <input type="email" name="email" id="staticemail" class="form-control" ngModel placeholder="Enter Email "
+        required>
+    </div>
+    <div class="form-group">
+      <label for="staticdob">Date of Birth</label>
+      <input type="date" name="dob" id="staticdob" class="form-control" ngModel placeholder="Date of Birth" required>
+    </div>
+    <div class="form-group">
+      <label for="staticgender">Gender</label>
+      <select id="staticgender" ngModel name ="gender" class="form-control" placeholder="Gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="staticpassword" class="">Password</label>
+      <input type="password" id="staticpassword" name="password" class="form-control" ngModel
+        placeholder="Enter Password" required>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-outline-dark btn-block" type="submit">Sign up</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-dark btn-block" routerLink="/login" >Login</button>
+      </div>
+    </div>
+  </form>
+</div>

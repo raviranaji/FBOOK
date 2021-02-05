@@ -1,0 +1,33 @@
+
+a{
+    text-decoration: none;
+}
+
+.selectedTab{
+    color: red !important;
+}
+
+.sticky {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .textColor{
+    color: #343a40 !important;
+  }

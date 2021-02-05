@@ -1,0 +1,15 @@
+img{
+    background-color: #e5e5e5;
+    border-width: 2px;
+    border-color:red;
+    border-radius:50%;
+}
+
+#txbox{
+    border: 2px solid rgb(7, 91, 154);
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+  }

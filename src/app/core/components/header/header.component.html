@@ -1,0 +1,24 @@
+<div
+    class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm navbar-fixed-top">
+    <h5 class="my-0 mr-md-auto font-weight-normal">FBOOK</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <div *ngIf="isLoggedIn" style="display: flex">
+            <div *ngFor="let data of userActionsList">
+                <!-- <a class="p-2" style="color:#343a40;" [ngClass]="{'selectedTab': data.clicked}" (click)="logout(data)"
+                    [routerLink]="data.url" *ngIf="data.isAdmin">
+                    {{data.buttonName}}
+                </a> -->
+
+                <a class="p-2" style="color:#343a40;" routerLinkActive="selectedTab"  (click)="logout(data)"
+                [routerLink]="data.url" *ngIf="data.isAdmin" [ngClass]="{'textColor': data.buttonName === 'Logout'}">
+                {{data.buttonName}}
+            </a>
+            </div>
+        </div>
+        <div *ngIf="!isLoggedIn">
+            <a class="p-2" style="color:#343a40;"  routerLinkActive="selectedTab" routerLink="/signup">Register</a>
+            <a class="p-2" style="color:#343a40;" routerLinkActive="selectedTab"  routerLink="/login">Login</a>
+        </div>
+
+    </nav>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <app-user-profile></app-user-profile>
+        </div>
+        <div class="col-sm-8">
+            <!-- <app-users-post></app-users-post> -->
+            <!-- <app-friend-request></app-friend-request> -->
+            <!-- <app-friend></app-friend> -->
+            <div class="container overflow-auto" style="height: 500px;">
+                <div class="card" *ngFor="let user of userList">
+                    <div class="card-body" style="padding: 10px;">
+                        <div class="row">
+                            <div class="col-sm-6" style="margin-top: 10px;">
+                                <span style="font-size: 18px;margin-left: 5px;">{{(user.firstName+" "+user.lastName) | titlecase}}</span>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#exampleModalCenter"   (click)="passDataToPopUp(user._id)">Edit</button>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-outline-danger btn-block" (click)="blockUser()">Block</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-popup></app-popup>

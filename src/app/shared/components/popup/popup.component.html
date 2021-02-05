@@ -1,0 +1,61 @@
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+   -->
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">User Details</h5>
+                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-signin" ngNativeValidate #signUpFormData="ngForm"
+                (ngSubmit)="updateProfileHandler(signUpFormData)" >
+                <!-- <p>{{userService.userDetails}}</p> -->
+                    <div class="form-group">
+                        <label for="staticfirstName">First Name</label>
+                        <input type="text" name="firstName" id="staticfirstName" class="form-control"
+                            [(ngModel)]="userDetails.firstName" placeholder="First Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="staticlastName">Last Name</label>
+                        <input type="text" name="lastName" id="staticlastName" class="form-control"
+                            [(ngModel)]="userDetails.lastName" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="staticemail">Email</label>
+                        <input type="email" name="email" id="staticemail" class="form-control" [(ngModel)]="userDetails.email"
+                            placeholder="Enter Email " required>
+                    </div>
+                    <div class="form-group">
+                        <label for="staticdob">Date of Birth</label>
+                        <input type="text" name="dob" id="staticdob" class="form-control" [(ngModel)]="userDetails.dob"
+                            placeholder="Date of Birth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="staticgender">Gender</label>
+                        <select id="staticgender" [value]="userDetails.gender" [(ngModel)]="userDetails.gender" name="gender" class="form-control"
+                            placeholder="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-dark btn-block" type="submit">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

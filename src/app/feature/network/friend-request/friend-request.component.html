@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <app-user-profile></app-user-profile>
+        </div>
+        <div class="col-sm-8">
+            <!-- <app-users-post></app-users-post> -->
+            <!-- <app-friend-request></app-friend-request> -->
+            <!-- <app-friend></app-friend> -->
+
+            <div class="container overflow-auto" style="height: 590px;">
+                <div class="card" *ngFor="let user of userList;let i = index">
+                    <div class="card-body" style="padding: 15px;">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div id="txbox">
+                                    <span>F-{{i+1}}</span>
+                                </div>
+                            </div>
+                            <div class="col-sm" style="margin-top:10px ">
+                                <span style="font-size: 18px;" >{{(user.firstName +" "+user.lastName) | titlecase}}</span>
+                            </div>
+                            <div class="col-sm">
+                                <button class="btn btn-outline-dark btn-block " (onclick)="sendRe">Send Request</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

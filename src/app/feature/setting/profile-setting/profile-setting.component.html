@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <app-user-profile></app-user-profile>
+        </div>
+        <div class="col-sm-8">
+            <!-- <app-users-post></app-users-post> -->
+            <!-- <app-friend-request></app-friend-request> -->
+            <!-- <app-friend></app-friend> -->
+
+            <div class="container-fluid">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" data-toggle="tab" href="#profileSetting" role="tab"
+                            aria-controls="profileSetting" aria-selected="true">Profile Setting</a>
+                        <a class="nav-item nav-link" data-toggle="tab" href="#changePassword" role="tab"
+                            aria-controls="changePassword-tab" aria-selected="false">Change Password</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="profileSetting" role="tabpanel"
+                        aria-labelledby="profileSetting-tab">
+                        <div class="container" style="margin-bottom:20px;margin-top: 20px; ">
+                            <form class="form-signin" ngNativeValidate #signUpFormData="ngForm"
+                                (ngSubmit)="updateProfileHandler(signUpFormData)">
+
+                                <div class="form-group">
+                                    <label for="staticfirstName">First Name</label>
+                                    <input type="text" name="firstName" id="staticfirstName" class="form-control"
+                                        [(ngModel)]="user.firstName" placeholder="First Name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="staticlastName">Last Name</label>
+                                    <input type="text" name="lastName" id="staticlastName" class="form-control"
+                                        [(ngModel)]="user.lastName" placeholder="Last Name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="staticemail">Email</label>
+                                    <input type="email" name="email" id="staticemail" class="form-control"
+                                        [(ngModel)]="user.email" placeholder="Enter Email " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staticdob">Date of Birth</label>
+                                    <input type="text" name="dob" id="staticdob" class="form-control"
+                                        [(ngModel)]="user.dob" placeholder="Date of Birth" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staticgender">Gender</label>
+                                    <select id="staticgender" [(ngModel)]="user.gender" name="gender"
+                                        class="form-control" placeholder="Gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-outline-dark btn-block" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="changePassword" role="tabpanel"
+                        aria-labelledby="changePassword-tab-tab">
+                        <div class="container" style="margin-bottom:20px;margin-top: 20px; ">
+                            <form class="form-signin" ngNativeValidate #loginForm="ngForm">
+
+
+
+                                <div class="form-group">
+                                    <label for="inputEmail">New Password</label>
+                                    <input type="password" name="newPassword" ngModel class="form-control"
+                                        placeholder="New Password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputPassword">Confirm Password</label>
+                                    <input type="password" name="confirmPassword" ngModel class="form-control"
+                                        placeholder="Confirm Password" required>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-outline-dark btn-block" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
